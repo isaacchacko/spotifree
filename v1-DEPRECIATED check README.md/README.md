@@ -1,0 +1,1 @@
+﻿essentially, the song database system changed from v2 onward because v1 has all of its songs in one big folder, while v2 and later only finds songs that are in a specific folder (aka a album). im leaving v1 a seperate thing however broken bc then i can see how far ive come
