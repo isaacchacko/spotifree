@@ -3,7 +3,7 @@ import pygame
 import json
 import time
 
-PATH = r'C:\Users\isaac\Documents\new_python\proud stuff\budget-spotify\songs'
+PATH = os.path.join(os.path.split(os.getcwd())[0], 'songs')
 def intWrapBound(value, lowerBound, upperBound):
 	'''
 	purpose: to return an altered version of value, to where

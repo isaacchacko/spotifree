@@ -3,13 +3,13 @@ from tkinter.filedialog import askdirectory # bro what, u cant reference the fil
 from tkinter.simpledialog import askstring # again bro what
 from tkinter.ttk import Combobox
 from download import downloadToDestination
-from win10toast import ToastNotifier
+# from win10toast import ToastNotifier
 
 class DisplayWindow(Tk):
 	def __init__(self):
 		super().__init__()
-		self.title('gamign?')
-		self.toaster = ToastNotifier()
+		self.title('Spotifree')
+		# self.toaster = ToastNotifier()
 
 	def open(self, AudioPlayerObj):
 		extension = AudioPlayerObj.getSongNames()[0].split('.')[-1]
@@ -43,7 +43,7 @@ class DisplayWindow(Tk):
 						downloadToDestination(targetAlbumPath, url, name)
 						AudioPlayerObj.setup()
 						generateSongWheel()
-						self.toaster.show_toast("New Song Downloaded!", f'"{name}" has been added to the "{targetAlbumName}" album.', threaded=True)
+						# self.toaster.show_toast("New Song Downloaded!", f'"{name}" has been added to the "{targetAlbumName}" album.', threaded=True)
 		
 		def refresh():
 			AudioPlayerObj.setup()
@@ -51,7 +51,7 @@ class DisplayWindow(Tk):
 
 		self.geometry("300x300")
 		self.configure(background='black')
-		Label(self, text = 'gamign?', bg = 'black', fg = 'grey', font = 'none 28 bold').grid(row=0,column=0,sticky=N)
+		Label(self, text = 'Spotifree', bg = 'black', fg = 'grey', font = 'none 28 bold').grid(row=0,column=0,sticky=N)
 
 		generateSongWheel()
 		
